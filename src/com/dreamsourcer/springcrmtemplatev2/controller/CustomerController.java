@@ -12,7 +12,7 @@ import com.dreamsourcer.springcrmtemplatev2.entity.Customer;
 
 
 @Controller
-@RequestMapping("/customer")
+@RequestMapping("/customers")
 public class CustomerController {
 
 	@Autowired
@@ -23,7 +23,7 @@ public class CustomerController {
 		
 		List<Customer> customerList = customerDAO.getCustomers();
 		
-		model.addAttribute("customerList", customerList);
+		model.addAttribute("customers", customerList);
 		
 		return "list-customer";
 		
