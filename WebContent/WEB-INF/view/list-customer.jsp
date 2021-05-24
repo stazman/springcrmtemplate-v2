@@ -5,6 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Customer List</title>
+<link 
+	type="text/css"
+	rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.css"
+/>
+
 </head>
 <body>
 	
