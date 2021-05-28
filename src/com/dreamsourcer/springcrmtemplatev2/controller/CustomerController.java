@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.dreamsourcer.springcrmtemplatev2.dao.CustomerDAO;
 import com.dreamsourcer.springcrmtemplatev2.entity.Customer;
+import com.dreamsourcer.springcrmtemplatev2.service.CustomerService;
 
 
 @Controller
@@ -17,12 +17,12 @@ import com.dreamsourcer.springcrmtemplatev2.entity.Customer;
 public class CustomerController {
 
 	@Autowired
-	private CustomerDAO customerDAO;
+	private CustomerService customerService;
 	
 	@GetMapping("/list")
 	public String listCustomers (Model model){
 		
-		List<Customer> customerList = customerDAO.getCustomers();
+		List<Customer> customerList = customerService.getCustomers();
 		
 		model.addAttribute("customers", customerList);
 		
