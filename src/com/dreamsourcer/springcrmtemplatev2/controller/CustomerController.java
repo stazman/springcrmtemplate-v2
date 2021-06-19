@@ -26,7 +26,7 @@ public class CustomerController {
 		
 		List<Customer> customerList = customerService.getCustomers();
 		
-		model.addAttribute("customers", customerList);
+		model.addAttribute("customer", customerList);
 		
 		return "list-customer";
 		
@@ -48,7 +48,7 @@ public class CustomerController {
 		
 		customerService.saveCustomer(theCustomer);
 		
-		return "redirect:/customer/list";
+		return "redirect:/customers/list";
 		
 	}
 	
