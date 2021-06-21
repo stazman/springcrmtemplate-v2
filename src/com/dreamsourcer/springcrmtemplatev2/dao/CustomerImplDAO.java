@@ -22,7 +22,7 @@ public class CustomerImplDAO implements CustomerDAO {
 
 		Session currSess = sessionFactory.getCurrentSession();
 		
-		Query<Customer> theQuery = currSess.createQuery("from Customer", Customer.class);
+		Query<Customer> theQuery = currSess.createQuery("from Customer order by lastName", Customer.class);
 		
 		List<Customer> allCustomers = theQuery.getResultList();
 	

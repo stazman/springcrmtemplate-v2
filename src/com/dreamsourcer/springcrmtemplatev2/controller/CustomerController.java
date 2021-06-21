@@ -26,7 +26,7 @@ public class CustomerController {
 		
 		List<Customer> customerList = customerService.getCustomers();
 		
-		model.addAttribute("customer", customerList);
+		model.addAttribute("customers", customerList);
 		
 		return "list-customer";
 		
