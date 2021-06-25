@@ -39,5 +39,16 @@ public class CustomerImplDAO implements CustomerDAO {
 		currSess.save(theCustomer);
 
 	}
+
+
+	@Override
+	public Customer getCustomer(int theId) {
+
+		Session currSession = sessionFactory.getCurrentSession();
+		
+		Customer theCustomer = currSession.get(Customer.class, theId);
+		
+		return theCustomer;
+	}
 	
 }
