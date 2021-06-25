@@ -56,7 +56,7 @@ public class CustomerController {
 	@GetMapping("/showFormForUpdate")
 	public String showFormUpdate(@RequestParam("customerID") int theId, Model theModel) {
 		
-		Customer theCustomer = customerService.getCustomers(theId);
+		Customer theCustomer = customerService.getCustomer(theId);
 		
 		theModel.addAttribute("customer", theCustomer);
 		
