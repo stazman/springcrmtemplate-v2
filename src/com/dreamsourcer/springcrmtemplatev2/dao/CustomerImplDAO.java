@@ -36,7 +36,7 @@ public class CustomerImplDAO implements CustomerDAO {
 
 		Session currSess = sessionFactory.getCurrentSession();
 		
-		currSess.save(theCustomer);
+		currSess.saveOrUpdate(theCustomer);
 
 	}
 
